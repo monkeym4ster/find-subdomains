@@ -40,11 +40,11 @@ const clearUrl = target => {
 
   const target = process.argv[2]
   const domain = clearUrl(target)
-  
+
   console.log(`[*] TARGET: ${domain}\n`)
 
   let response
-  try { 
+  try {
     response = await getRawResponse(domain)
   } catch (err) {
     console.log(`[X] Information not available! (${err.statusCode})`)
@@ -52,7 +52,7 @@ const clearUrl = target => {
   }
 
   const jsonData = JSON.parse(`[${response.trim().replace(/}{/g, '},{')}]`)
-  const subdomains = Array.from(new Set(jsonData.map(_ => _.name_value)))
+  const subdomains = Array.from(new Set(jsonData.map(_ => _.name_value))).sort((a, b) => a > b)
   for (const _ of subdomains) console.log(`[+] ${_}`)
   console.log('\n[*]  Done. Have a nice day! ;).')
 })()
