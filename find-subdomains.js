@@ -3,9 +3,8 @@
 const request = require('superagent')
 const url = require('url')
 const fs = require('fs')
+const path = require('path')
 const pkg = require('./package.json')
-
-const domain = 'knownsec.com'
 
 const getRawResponse = domain => {
   return new Promise((resolve, reject) => {
@@ -19,7 +18,7 @@ const getRawResponse = domain => {
 }
 
 const printBanner = () => {
-  const fileData = fs.readFileSync('./banner.txt', 'utf8')
+  const fileData = fs.readFileSync(path.join(__dirname, 'banner.txt'), 'utf8')
   console.log(`${fileData} Version ${pkg.version}\n`)
 
 }
