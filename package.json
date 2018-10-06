@@ -3,7 +3,7 @@
     "superagent": "^4.0.0-alpha.1"
   },
   "name": "find-subdomains",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Find subdomains",
   "main": "find-subdomains.js",
   "devDependencies": {},

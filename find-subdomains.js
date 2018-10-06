@@ -52,7 +52,7 @@ const clearUrl = target => {
   }
 
   const jsonData = JSON.parse(`[${response.trim().replace(/}{/g, '},{')}]`)
-  const subdomains = Array.from(new Set(jsonData.map(_ => _.name_value))).sort((a, b) => a > b)
+  const subdomains = Array.from(new Set(jsonData.map(_ => _.name_value))).sort((a, b) => a[0].charCodeAt() - b[0].charCodeAt())
   for (const _ of subdomains) console.log(`[+] ${_}`)
   console.log('\n[*]  Done. Have a nice day! ;).')
 })()
