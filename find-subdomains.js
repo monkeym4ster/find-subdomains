@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const request = require('superagent')
 const url = require('url')
 const fs = require('fs')
