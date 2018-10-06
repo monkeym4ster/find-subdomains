@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "superagent": "^4.0.0-alpha.1"
+  },
+  "name": "find-subdomains",
+  "version": "1.0.0",
+  "description": "Find subdomains",
+  "main": "find-subdomains.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monkeym4ster/find-subdomains.git"
+  },
+  "bin": {
+    "find-subdomains": "./find-subdomains.js"
+  },
+  "keywords": [
+    "subdomains"
+  ],
+  "author": "M4ster <www.m4ster@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/monkeym4ster/find-subdomains/issues"
+  },
+  "homepage": "https://github.com/monkeym4ster/find-subdomains#readme"
+}
