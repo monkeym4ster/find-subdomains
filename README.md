@@ -33,7 +33,7 @@ $ node find-subdomains.js github.com
 
 ### Running
 ```bash
-$ node find-subdomains.js --help
+$ node find-subdomains.js
 ```
 
 ## Thanks
